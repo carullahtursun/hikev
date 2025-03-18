@@ -8,26 +8,26 @@ const FunFact = (props) => {
     const funfact = [
         {
             title: '250+',
-            subTitle: 'Expert Volunteer',
+            subTitle: 'Toplam Gönüllü',
         },
         {
             title: '1026+',
-            subTitle: 'Happy Families',
+            subTitle: 'Bursiyer',
         },
         {
-            title: '25M',
-            subTitle: 'Total Donation',
+            title: '2500+',
+            subTitle: 'Bağısçı',
         },
         {
-            title: '1250',
-            subTitle: 'Successful Campains',
+            title: '1250+',
+            subTitle: 'Öğrenci Projesi',
         },
 
 
     ]
 
     return (
-        <section className="wpo-fun-fact-section">
+        <section className="wpo-fun-fact-section mb-5">
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-12">

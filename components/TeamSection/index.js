@@ -63,17 +63,16 @@ const TeamSection = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-6">
                         <div className="wpo-section-title">
-                            <span>Expert Team</span>
-                            <h2>Meet Our Volunteer Team</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form,</p>
+                        
+                            <h2>MÜTEVELLİ HEYETİMİZ</h2>
+                            <p>Vakfın yönetimini ve stratejik hedeflerini belirleyen mütevelii heyetimiz, alanında uzman ve eğitim gönüllüsü kişilerden oluşmaktadır</p>
                         </div>
                     </div>
                 </div>
                 <div className="wpo-team-wrap">
                     <div className="team-slider">
                         <Slider {...settings}>
-                            {Teams.slice(0, 6).map((Team, tm) => (
+                            {Teams.map((Team, tm) => (
                                 <div className="wpo-team-item" key={tm}>
                                     <div className="wpo-team-img">
                                         <Image src={Team.tImg} alt="" />

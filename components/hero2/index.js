@@ -6,10 +6,7 @@ import shape2 from '/public/images/slider/sp2.png'
 import shape3 from '/public/images/slider/sp3.png'
 import Image from "next/image";
 
-
-
-
-const Hero2 =() => {
+const Hero2 = () => {
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
@@ -22,13 +19,14 @@ const Hero2 =() => {
                     <div className="col col-xs-6 col-lg-6">
                         <div className="wpo-hero-section-text">
                             <div className="wpo-hero-title">
-                                <h2>Giving <span>Education</span> is The Best Gift Ever</h2>
+                                <h2>Geleceğe <span>Umut</span> Ol, Eğitime Destek Ver</h2>
                             </div>
                             <div className="wpo-hero-subtitle">
-                                <p>We help local nonprofits access the funding, tools, training, and support they need to become more.</p>
+                                <p>Vakfımız, vatana, millete ve kültürel değerlerine bağlı, ülkemizin ihtiyaç duyduğu alanlarda 
+                                nitelikli bireyler yetiştirmek için çalışmalar yürütmektedir.</p>
                             </div>
                             <div className="btns">
-                                <Link onClick={ClickHandler} href="/about" className="btn theme-btn-s2">Get Started</Link>
+                                <Link onClick={ClickHandler} href="/about" className="btn theme-btn-s2">Daha Fazla Bilgi</Link>
                             </div>
                         </div>
                     </div>
@@ -37,7 +35,7 @@ const Hero2 =() => {
                             <div className="right-items-wrap">
                                 <div className="right-item">
                                     <div className="r-img">
-                                        <Image src={hero1} alt=""/>
+                                        <Image src={hero1} alt="HİKEV Eğitim Desteği"/>
                                     </div>
                                     <div className="sp-1"><Image src={shape1} alt=""/></div>
                                     <div className="sp-2"><Image src={shape2} alt=""/></div>
@@ -51,7 +49,5 @@ const Hero2 =() => {
         </section>
     )
 }
-
-
 
 export default Hero2;

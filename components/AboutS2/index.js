@@ -1,24 +1,22 @@
 import React from 'react'
-import Link from  'next/link'
+import Link from 'next/link'
 import abimg from '/public/images/ab.png'
 import Image from 'next/image'
 
-
 const AboutS2 = (props) => {
 
-    const ClickHandler = () =>{
+    const ClickHandler = () => {
         window.scrollTo(10, 0);
-     }
+    }
 
-
-    return(
+    return (
         <section className="wpo-about-section-s2 section-padding">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12 col-12">
                         <div className="wpo-about-wrap">
                             <div className="wpo-about-img">
-                                <Image src={abimg} alt=""/>
+                                <Image src={abimg} alt="HİKEV Vakfı"/>
                                 <div className="wpo-total-raised">
                                     <div className="wpo-total-raised-wrap">
                                         <div className="wpo-total-raised-icon">
@@ -26,7 +24,7 @@ const AboutS2 = (props) => {
                                         </div>
                                         <div className="wpo-total-raised-text">
                                             <ul>
-                                                <li>Total Raised<span>$25000</span></li>
+                                                <li>Toplam Destek<span>$25000</span></li>
                                             </ul>
                                             <div className="progress-section">
                                                 <div className="process">
@@ -49,17 +47,18 @@ const AboutS2 = (props) => {
                     </div>
                     <div className="col-lg-6 col-md-12 col-12">
                         <div className="wpo-about-text">
-                            <span>About Us</span>
-                            <h2>We Can Save More Lifes With Your Helping Hand.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                            <span>Hakkımızda</span>
+                            <h2>Geleceğe Umut Olun, Eğitime Destek Verin!</h2>
+                            <p>Hacı İsmail Kurt Eğitim Vakfı (HİKEV), ülkemizin ihtiyaç duyduğu alanlarda 
+                                nitelikli bireyler yetiştirmek amacıyla eğitim projeleri yürütmektedir. 
+                                Vakfımız, maddi imkânı kısıtlı öğrencilere burs sağlamak, eğitim kurumlarını 
+                                desteklemek ve geleceğe ışık tutacak projeleri hayata geçirmek için çalışmaktadır.</p>
                             <ul>
-                                <li>The standard chunk of Lorem Ipsum used since.</li>
-                                <li>Randomised words which don't look even slightly believable.</li>
-                                <li>Making this the first true generator on the Internet.</li>
+                                <li>Eğitim kalitesinin yükselmesine katkı sağlıyoruz.</li>
+                                <li>Maddi imkânı kısıtlı öğrencilere burs desteği sunuyoruz.</li>
+                                <li>Bilimsel araştırmalar, sosyal projeler ve eğitim kurumlarına destek veriyoruz.</li>
                             </ul>
-                            <Link onClick={ClickHandler} className="theme-btn-s2" href="/about">More About</Link>
+                           {/*  <Link onClick={ClickHandler} className="theme-btn-s2" href="/about">Daha Fazla Bilgi</Link> */}
                         </div>
                     </div>
                 </div>

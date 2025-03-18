@@ -82,7 +82,7 @@ const Services = [
     },
     {
         id: '5',
-        fIcon1:'flaticon-elephant',
+        fIcon1:'flaticon-graduation-cap',
         title:'Saving Elephant',
         slug:'Saving-Elephant',
         description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',

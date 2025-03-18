@@ -13,6 +13,11 @@ import abimg from '/public/images/about6.jpg'
 import ProjectSection4 from '../../components/ProjectSection4';
 import Testimonial2 from '../../components/Testimonial2';
 import EventSection4 from '../../components/EventSection4';
+import AboutS3 from '../../components/AboutS2';
+import AboutS2 from '../../components/AboutS2';
+import NoPoint from '../../components/NoPoint';
+import Service from '../../components/Service';
+import FunFact from '../../components/FunFact';
 
 
 const HomePage6 =() => {
@@ -20,15 +25,17 @@ const HomePage6 =() => {
         <Fragment>
             <Navbar Logo={Logo} hclass={'wpo-header-style-4'}/>
             <Hero6 heroClass={'wpo-hero-section-6'}/>
-            <AboutS4 abClass={'wpo-about-section-s6'} abImg={abimg} Atitle={'We are Protecting Wildlife With All Our Dedication.'}/>
-            <Service5/>
-            <TeamSection3/>
+            <Service Fclass={'wpo-features-section-s2'} vclassClass={'v1'}/>
+            <NoPoint abClass={'wpo-about-section-s6'} abImg={abimg} Atitle={'We are Protecting Wildlife With All Our Dedication.'}/>
+        {/*     <Service5/> */}
+        <FunFact/>
+            {/* <TeamSection3/>
             <ProjectSection4/>
             <Testimonial2 tClass={'wpo-testimonial-area-s3 pt-0'}/>
             <EventSection4/>
             <BlogSection5/>
             <PartnerSection tNone={'title-none'}/>
-            <Scrollbar/>
+            <Scrollbar/> */}
             <Footer/>
         </Fragment>
     )

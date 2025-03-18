@@ -145,3 +145,6 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 .flaticon-left-quote:before {
     content: "\f12a";
 }
+.flaticon-scholarship:before {
+    content: "\f12a";
+}

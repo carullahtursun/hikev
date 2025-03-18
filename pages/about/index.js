@@ -17,14 +17,14 @@ const AboutPage =() => {
     return(
         <Fragment>
             <Navbar Logo={Logo}/>
-            <PageTitle pageTitle={'About Us'} pagesub={'About'}/> 
-            <VideoSec/>
-            <Service Fclass={'wpo-features-section-s2'}/>
+            <PageTitle pageTitle={'Hakkımızda'} pagesub={'Hakkımızda'}/> 
+            {/* <VideoSec/>
+            <Service Fclass={'wpo-features-section-s2'}/> */}
             <AboutS2/>
             <FunFact/>
-            <CauseSection/>
+            {/* <CauseSection/> */}
             <TeamSection/>
-            <PartnerSection tNone={'title-none'}/>
+           {/*  <PartnerSection tNone={'title-none'}/> */}
             <Footer/>
             <Scrollbar/>
         </Fragment>

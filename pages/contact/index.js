@@ -10,7 +10,7 @@ const ContactPage =() => {
     return(
         <Fragment>
             <Navbar Logo={Logo}/>
-            <PageTitle pageTitle={'Contact Us'} pagesub={'Contact'}/> 
+            <PageTitle pageTitle={'Hakkımızda'} pagesub={'Hakkımızda'}/> 
             <Contactpage/>
             <Footer/>
             <Scrollbar/>

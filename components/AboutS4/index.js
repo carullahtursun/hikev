@@ -21,9 +21,6 @@ const AboutS4 = (props) => {
                             <div className="wpo-about-wrap">
                                 <div className="wpo-about-img">
                                     <Image src={props.abImg} alt="" />
-                                    <div className="pop-up-video">
-                                        <VideoModal />
-                                    </div>
                                     <div className="shp-1"></div>
                                     <div className="shp-2"></div>
                                 </div>
@@ -32,13 +29,13 @@ const AboutS4 = (props) => {
                         </div>
                         <div className="col-lg-6 col-md-12 col-12">
                             <div className="wpo-about-text">
-                                <span>{props.pageData.title}</span>
+                                <h2>{props?.pageData?.title}</h2>
                                
                                 <p>{props.pageData?.description}</p>
                                 {
-                                    props.pageData?.features?.map((feature, fitem) => (
+                                    props.pageData?.points?.map((point, fitem) => (
                                         <ul key={fitem}>
-                                            <li>{feature}</li>
+                                            <li>{point}</li>
                                         </ul>
                                     ))
                                 }

@@ -7,6 +7,27 @@ import Link from 'next/link'
 const Hero6 = (props) => {
 
 
+    const slidesData = [
+        {
+            id: 1,
+            image: '/images/slider/slide-1.jpg',
+            title: 'Eğitime Destek, Geleceğe Yatırım.',
+            subtitle: 'Öğrencilere burs vererek onların geleceğine katkıda bulunun.'
+        },
+        {
+            id: 2,
+            image: '/images/slider/slide-2.jpg',
+            title: 'Bağışlarınızla Umut Olun.',
+            subtitle: 'Bağışlarınızla daha fazla öğrenciye destek olabilirsiniz.'
+        },
+        {
+            id: 3,
+            image: '/images/slider/slide-3.jpg',
+            title: 'Birlikte Daha Güçlüyüz.',
+            subtitle: 'Topluma katkı sağlamak için birlikte çalışalım.'
+        }
+    ];
+
     var settings = {
         dots: false,
         arrows: true,
@@ -23,61 +44,26 @@ const Hero6 = (props) => {
             <div className="hero-container">
                 <div className="hero-wrapper">
                     <Slider {...settings}>
-                        <div className="hero-slide">
-                            <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${'/images/slider/slide-3.jpg'})` }}>
-                                <div className="container-fluid">
-                                    <div className="slide-content">
-                                        <div className="wpo-hero-title">
-                                            <h2>Green is for hope just as gray is for death.</h2>
-                                        </div>
-                                        <div className="wpo-hero-subtitle">
-                                            <p>We help local nonprofits access the funding, and support they need to become more.</p>
-                                        </div>
-                                        <div className="clearfix"></div>
-                                        <div className="slide-btns">
-                                            <Link href="/about" className="theme-btn">Get Started</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="hero-slide">
-                            <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${'/images/slider/slide-5.jpg'})` }}>
-                                <div className="container-fluid">
-                                    <div className="slide-content">
-                                        <div className="wpo-hero-title">
-                                            <h2>Green is for hope just as gray is for death.</h2>
-                                        </div>
-                                        <div className="wpo-hero-subtitle">
-                                            <p>We help local nonprofits access the funding, and support they need to become more.</p>
-                                        </div>
-                                        <div className="clearfix"></div>
-                                        <div className="slide-btns">
-                                            <Link href="/about" className="theme-btn">Get Started</Link>
+                        {
+                            slidesData.map(slide => (
+                                <div className="hero-slide" key={slide.id}>
+                                    <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${slide.image})` }}>
+                                        <div className="container-fluid">
+                                            <div className="slide-content">
+                                                <div className="wpo-hero-title">
+                                                    <h2>{slide.title}</h2>
+                                                </div>
+                                                <div className="wpo-hero-subtitle">
+                                                    <p>{slide.subtitle}</p>
+                                                </div>
+                                                <div className="clearfix"></div>
+                                            
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="hero-slide">
-                            <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${'/images/slider/slide-6.jpg'})` }}>
-                                <div className="container-fluid">
-                                    <div className="slide-content">
-                                        <div className="wpo-hero-title">
-                                            <h2>Green is for hope just as gray is for death.</h2>
-                                        </div>
-                                        <div className="wpo-hero-subtitle">
-                                            <p>We help local nonprofits access the funding, and support they need to become more.</p>
-                                        </div>
-                                        <div className="clearfix"></div>
-                                        <div className="slide-btns">
-                                            <Link href="/about" className="theme-btn">Get Started</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
                     </Slider>
                 </div>
             </div>
