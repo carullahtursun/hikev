@@ -1,46 +1,55 @@
-import React, { Component } from 'react'
-import Link from 'next/link'
-import MobileMenu from '../../components/MobileMenu'
-import Image from 'next/image'
+import React, { Component } from 'react';
+import Link from 'next/link';
+import MobileMenu from '../../components/MobileMenu';
+
+const menuData = [
+    {
+        title: "Ana Sayfa",
+        href: "/"
+    },
+    {
+        title: "Hikevimiz",
+        href: "/our-story",
+        submenu: [
+            { title: "Amacımız", href: "/our-story#our-purposes" },
+            { title: "Hedeflerimiz", href: "/our-story#our-goals" },
+            { title: "İcraatlerimiz", href: "/our-story#our-actions" },
+            { title: "Kurucumuz", href: "/our-story#our-founder" },
+            { title: "Kariyer", href: "/our-story#career" },
+            { title: "Kimliğimiz", href: "/our-story#identity" },
+            { title: "Paydaş", href: "/our-story#partners" },
+            { title: "Mütevelli", href: "/our-story#trustees" },
+            { title: "Yönetim", href: "/our-story#managment" }
+        ]
+    },
+    {
+        title: "Hakkımızda",
+        href: "/about"
+    },
+    {
+        title: "İletişim",
+        href: "/contact"
+    }
+];
 
 export default class Header extends Component {
-
     state = {
-        isSearchShow: false,
-    }
+        isSearchShow: false
+    };
 
     searchHandler = () => {
-        this.setState({
-            isSearchShow: !this.state.isSearchShow
-        })
-    }
+        this.setState({ isSearchShow: !this.state.isSearchShow });
+    };
 
-
+    smoothScroll = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({ top: targetElement.offsetTop - 80, behavior: "smooth" });
+        }
+    };
 
     render() {
-        const { isSearchShow } = this.state;
-
-        const SubmitHandler = (e) => {
-            e.preventDefault()
-        }
-
-        const ClickHandler = () => {
-            window.scrollTo(10, 0);
-        }
-
-        const smoothScroll = (event, targetId) => {
-            event.preventDefault();
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Navbar yüksekliği kadar aşağı kaydırma
-                    behavior: "smooth"
-                });
-            }
-        };
-        
-
         return (
             <header id="header" className={this.props.topbarNone}>
                 <div className={`wpo-site-header ${this.props.hclass}`}>
@@ -48,132 +57,66 @@ export default class Header extends Component {
                         <div className="container-fluid">
                             <div className="row align-items-center">
                                 <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
-                                    <div className="mobail-menu">
-                                        <MobileMenu />
-                                    </div>
+                                    <MobileMenu />
                                 </div>
                                 <div className="col-lg-3 col-md-6 col-6">
                                     <div className="navbar-header">
                                         LOGO
-                                        {/* <Link onClick={ClickHandler} className="navbar-brand" href="/home"><Image src={this.props.Logo}
-                                            alt="" /></Link> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-1 col-1">
                                     <div id="navbar" className="collapse navbar-collapse navigation-holder">
-                                        <button className="menu-close"><i className="ti-close"></i></button>
                                         <ul className="nav navbar-nav mb-2 mb-lg-0">
-                                            <li >
-                                                <Link onClick={ClickHandler} href="/">Ana Sayfa</Link>
-                                               {/*  <ul className="sub-menu">
-                                                    <li><Link onClick={ClickHandler} href="/home">Home Charity</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/home2">Home Education</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/home3">Home Wildlife</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/home4">Home Ocean Polution</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/home5">Home World Pandemic</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/home6">Home Nature</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/home7">Home Nature S2</Link></li>
-                                                </ul> */}
-                                            </li>
-                                            <li>
-                                                <Link href="/our-story" onClick={ClickHandler}>Hikevimiz</Link>
-                                                <ul className="sub-menu">
-                                                    <li><Link href="/our-story#our-purposes" onClick={(e) => smoothScroll(e, 'our-purposes')}>Amacımız</Link></li>
-                                                    <li><Link href="/our-story#our-goals" onClick={(e) => smoothScroll(e, 'our-goals')}>Hedeflerimiz</Link></li>
-                                                    <li><Link href="/our-story#our-actions" onClick={(e) => smoothScroll(e, 'our-actions')}>İcraatlerimiz</Link></li>
-                                                    <li><Link href="/our-story#our-founder" onClick={(e) => smoothScroll(e, 'our-founder')}>Kurucumuz</Link></li>
-                                                    <li><Link href="/our-story#career" onClick={(e) => smoothScroll(e, 'career')}>Kariyer</Link></li>
-                                                    <li><Link href="/our-story#identity" onClick={(e) => smoothScroll(e, 'identity')}>Kimliğimiz</Link></li>
-                                                    <li><Link href="/our-story#partners" onClick={(e) => smoothScroll(e, 'partners')}>Paydaş</Link></li>
-                                                    <li><Link href="/our-story#trustees" onClick={(e) => smoothScroll(e, 'trustees')}>Mütevelli</Link></li>
-                                                    <li><Link href="/our-story#managment" onClick={(e) => smoothScroll(e, 'managment')}>Yönetim</Link></li>
-                                                </ul>
-                                            </li>
-                                            <li><Link onClick={ClickHandler} href="/about">Hakkımızda</Link></li>
-                                            <li><Link onClick={ClickHandler} href="/contact">İletişim</Link></li>
-                                            {/* <li>
-                                                <Link href="/cause">Cause</Link>
-                                                <ul className="sub-menu">
-                                                    <li><Link onClick={ClickHandler} href="/cause">Cause</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/cause-single/Poor-Children">Cause Single</Link></li>
-                                                </ul>
-                                            </li> */}
-                                            {/* <li className="menu-item-has-children">
-                                                <Link href="/">Events</Link>
-                                                <ul className="sub-menu">
-                                                    <li><Link onClick={ClickHandler} href="/event">Events</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/event-s2">Events S2</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/event-single/Help-Children">Events Single</Link></li>
-                                                </ul>
-                                            </li> */}
-                                            {/* <li className="menu-item-has-children">
-                                                <Link href="/">Pages</Link>
-                                                <ul className="sub-menu">
-                                                    <li><Link onClick={ClickHandler} href="/about">About</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/service">Service</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/service/Clean-Water">Service Single</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/project">Project</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/project/African-Macaw-Bird">Project Single</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/donate">Donate</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/volunteer">Volunteer</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/testimonial">Testimonial</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/404">Error 404</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/login">Login</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/register">Sign Up</Link></li>
-                                                </ul>
-                                            </li> */}
-                                            {/* <li className="menu-item-has-children">
-                                                <Link onClick={ClickHandler} href="/blog">Blog</Link>
-                                                <ul className="sub-menu">
-                                                    <li><Link onClick={ClickHandler} href="/blog">Blog right sidebar</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/blog-left-sidebar">Blog left sidebar</Link></li>
-                                                    <li><Link onClick={ClickHandler} href="/blog-fullwidth">Blog fullwidth</Link></li>
-                                                    <li className="menu-item-has-children">
-                                                        <Link onClick={ClickHandler} href="/">Blog details</Link>
+                                            {menuData.map((menu, index) => (
+                                                <li key={index} className={menu.submenu ? "menu-item-has-children" : ""}>
+                                                    <Link href={menu.href}>
+                                                        {menu.title}
+                                                    </Link>
+                                                    {menu.submenu && (
                                                         <ul className="sub-menu">
-                                                            <li><Link onClick={ClickHandler} href="/blog-single/Make-Someone’s">Blog details right sidebar</Link>
-                                                            </li>
-                                                            <li><Link onClick={ClickHandler} href="/blog-single-left-sidebar/Make-Someone’s">Blog details left
-                                                                sidebar</Link></li>
-                                                            <li><Link onClick={ClickHandler} href="/blog-single-fullwidth/Make-Someone’s">Blog details
-                                                                fullwidth</Link></li>
+                                                            {menu.submenu.map((sub, subIndex) => (
+                                                                <li key={subIndex}>
+                                                                    <Link href={sub.href} onClick={(e) => this.smoothScroll(e, sub.href.split("#")[1])}>
+                                                                        {sub.title}
+                                                                    </Link>
+                                                                </li>
+                                                            ))}
                                                         </ul>
-                                                    </li>
-                                                </ul>
-                                            </li> */}
+                                                    )}
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
-                                 <div className="col-lg-3 col-md-2 col-2">
-                                    <div className="header-right">
+                                <div className="col-lg-3 col-md-2 col-2">
+                                    <div id="navbar" className="header-right">
                                         <div className="header-search-form-wrapper">
                                             <div className="cart-search-contact">
                                                 <button className="search-toggle-btn">
-                                                <Link href="/">
-                                                <i className={"ti-facebook"}></i>
-                                                 </Link>
+                                                    <Link href="/">
+                                                        <i className="ti-facebook"></i>
+                                                    </Link>
                                                 </button>
                                             </div>
                                         </div>
                                         <div className="header-search-form-wrapper">
                                             <div className="cart-search-contact">
                                                 <button className="search-toggle-btn">
-                                                <Link href="/">
-                                                <i className="ti-twitter-alt"></i>
-                                                 </Link>
+                                                    <Link href="/">
+                                                        <i className="ti-twitter-alt"></i>
+                                                    </Link>
                                                 </button>
                                             </div>
                                         </div>
                                         <div className="header-search-form-wrapper">
                                             <div className="cart-search-contact">
                                                 <button className="search-toggle-btn">
-                                                <Link href="/">
-                                                <i className="ti-instagram"></i>
-                                                 </Link>
+                                                    <Link href="/">
+                                                        <i className="ti-instagram"></i>
+                                                    </Link>
                                                 </button>
                                             </div>
                                         </div>
-                                    
                                     </div>
                                 </div>
                             </div>
@@ -181,6 +124,6 @@ export default class Header extends Component {
                     </nav>
                 </div>
             </header>
-        )
+        );
     }
 }

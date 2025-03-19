@@ -194,6 +194,40 @@ const menus = [
     
 ]
 
+const menuData = [
+    {
+        id: 1,
+        title: "Ana Sayfa",
+        href: "/"
+    },
+    {
+        id: 2,
+        title: "Hikevimiz",
+        href: "/our-story",
+        submenu: [
+            {id:3, title: "Amacımız", href: "/our-story#our-purposes" },
+            {id:4,  title: "Hedeflerimiz", href: "/our-story#our-goals" },
+            {id:5, title: "İcraatlerimiz", href: "/our-story#our-actions" },
+            {id:6,  title: "Kurucumuz", href: "/our-story#our-founder" },
+            {id:7,  title: "Kariyer", href: "/our-story#career" },
+            {id:8,  title: "Kimliğimiz", href: "/our-story#identity" },
+            {id:9,  title: "Paydaş", href: "/our-story#partners" },
+            {id:10,  title: "Mütevelli", href: "/our-story#trustees" },
+            {id:11,  title: "Yönetim", href: "/our-story#managment" }
+        ]
+    },
+    {
+        id:12,
+        title: "Hakkımızda",
+        href: "/about"
+    },
+    {
+        id:13,
+        title: "İletişim",
+        href: "/contact"
+    }
+];
+
 
 export default class MobileMenu extends Component {
 
@@ -230,20 +264,20 @@ export default class MobileMenu extends Component {
                     </div>
 
                     <ul className="responsivemenu">
-                        {menus.map(item => {
+                        {menuData.map(item => {
                             return (
                                 <li key={item.id}>
                                     {item.submenu ? <p onClick={this.setIsOpen(item.id)}>
                                         {item.title}
                                         {item.submenu ? <i className="fa fa-angle-right" aria-hidden="true"></i> : ''}
-                                    </p> : <Link onClick={ClickHandler} href={item.link}>{item.title}</Link>}
+                                    </p> : <Link onClick={ClickHandler} href={item.href}>{item.title}</Link>}
                                     {item.submenu ?
                                     <Collapse isOpen={item.id === isOpen}>
                                         <Card>
                                             <CardBody>
                                                 <ul>
                                                     {item.submenu.map(submenu => (
-                                                        <li key={submenu.id}><Link onClick={ClickHandler} className="active" href={submenu.link}>{submenu.title}</Link></li>
+                                                        <li key={submenu.id}><Link onClick={ClickHandler} className="active" href={submenu.href}>{submenu.title}</Link></li>
                                                     ))}
                                                 </ul>
                                             </CardBody>
@@ -254,6 +288,38 @@ export default class MobileMenu extends Component {
                             )
                         })}
                     </ul>
+
+                    <div className="mt-5 d-flex jıustify-content-space-between align-items-center">
+                        <div className="header-right">
+                            <div className="header-search-form-wrapper">
+                                <div className="cart-search-contact">
+                                    <button className="search-toggle-btn">
+                                        <Link href="/">
+                                            <i className="ti-facebook"></i>
+                                        </Link>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="header-search-form-wrapper">
+                                <div className="cart-search-contact">
+                                    <button className="search-toggle-btn">
+                                        <Link href="/">
+                                            <i className="ti-twitter-alt"></i>
+                                        </Link>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="header-search-form-wrapper">
+                                <div className="cart-search-contact">
+                                    <button className="search-toggle-btn">
+                                        <Link href="/">
+                                            <i className="ti-instagram"></i>
+                                        </Link>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
