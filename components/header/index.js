@@ -5,43 +5,23 @@ import Image from 'next/image'
 import Logo from '/public/images/logo.png'
 
 export default class Header extends Component {
-
     state = {
-        isSearchShow: false,
-    }
+        isSearchShow: false
+    };
 
     searchHandler = () => {
-        this.setState({
-            isSearchShow: !this.state.isSearchShow
-        })
-    }
+        this.setState({ isSearchShow: !this.state.isSearchShow });
+    };
 
-
+    smoothScroll = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({ top: targetElement.offsetTop - 80, behavior: "smooth" });
+        }
+    };
 
     render() {
-        const { isSearchShow } = this.state;
-
-        const SubmitHandler = (e) => {
-            e.preventDefault()
-        }
-
-        const ClickHandler = () => {
-            window.scrollTo(10, 0);
-        }
-
-        const smoothScroll = (event, targetId) => {
-            event.preventDefault();
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Navbar yüksekliği kadar aşağı kaydırma
-                    behavior: "smooth"
-                });
-            }
-        };
-        
-
         return (
             <header id="header" className={this.props.topbarNone}>
                 <div className={`wpo-site-header ${this.props.hclass}`}>
@@ -49,9 +29,7 @@ export default class Header extends Component {
                         <div className="container-fluid">
                             <div className="row align-items-center">
                                 <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
-                                    <div className="mobail-menu">
-                                        <MobileMenu />
-                                    </div>
+                                    <MobileMenu />
                                 </div>
                                 <div className="col-lg-3 col-md-6 col-6">
                                     <div className="navbar-header">
@@ -62,7 +40,6 @@ export default class Header extends Component {
                                 </div>
                                 <div className="col-lg-6 col-md-1 col-1">
                                     <div id="navbar" className="collapse navbar-collapse navigation-holder">
-                                        <button className="menu-close"><i className="ti-close"></i></button>
                                         <ul className="nav navbar-nav mb-2 mb-lg-0">
                                             <li >
                                                 <Link onClick={ClickHandler} href="/">Ana Sayfa</Link>
@@ -132,49 +109,49 @@ export default class Header extends Component {
                                                     <li className="menu-item-has-children">
                                                         <Link onClick={ClickHandler} href="/">Blog details</Link>
                                                         <ul className="sub-menu">
-                                                            <li><Link onClick={ClickHandler} href="/blog-single/Make-Someone’s">Blog details right sidebar</Link>
-                                                            </li>
-                                                            <li><Link onClick={ClickHandler} href="/blog-single-left-sidebar/Make-Someone’s">Blog details left
-                                                                sidebar</Link></li>
-                                                            <li><Link onClick={ClickHandler} href="/blog-single-fullwidth/Make-Someone’s">Blog details
-                                                                fullwidth</Link></li>
+                                                            {menu.submenu.map((sub, subIndex) => (
+                                                                <li key={subIndex}>
+                                                                    <Link href={sub.href} onClick={(e) => this.smoothScroll(e, sub.href.split("#")[1])}>
+                                                                        {sub.title}
+                                                                    </Link>
+                                                                </li>
+                                                            ))}
                                                         </ul>
-                                                    </li>
-                                                </ul>
-                                            </li> */}
+                                                    )}
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </div>
-                                 <div className="col-lg-3 col-md-2 col-2">
-                                    <div className="header-right">
+                                <div className="col-lg-3 col-md-2 col-2">
+                                    <div id="navbar" className="header-right">
                                         <div className="header-search-form-wrapper">
                                             <div className="cart-search-contact">
                                                 <button className="search-toggle-btn">
-                                                <Link href="/">
-                                                <i className={"ti-facebook"}></i>
-                                                 </Link>
+                                                    <Link href="/">
+                                                        <i className="ti-facebook"></i>
+                                                    </Link>
                                                 </button>
                                             </div>
                                         </div>
                                         <div className="header-search-form-wrapper">
                                             <div className="cart-search-contact">
                                                 <button className="search-toggle-btn">
-                                                <Link href="/">
-                                                <i className="ti-twitter-alt"></i>
-                                                 </Link>
+                                                    <Link href="/">
+                                                        <i className="ti-twitter-alt"></i>
+                                                    </Link>
                                                 </button>
                                             </div>
                                         </div>
                                         <div className="header-search-form-wrapper">
                                             <div className="cart-search-contact">
                                                 <button className="search-toggle-btn">
-                                                <Link href="/">
-                                                <i className="ti-instagram"></i>
-                                                 </Link>
+                                                    <Link href="/">
+                                                        <i className="ti-instagram"></i>
+                                                    </Link>
                                                 </button>
                                             </div>
                                         </div>
-                                    
                                     </div>
                                 </div>
                             </div>
@@ -182,6 +159,6 @@ export default class Header extends Component {
                     </nav>
                 </div>
             </header>
-        )
+        );
     }
 }
