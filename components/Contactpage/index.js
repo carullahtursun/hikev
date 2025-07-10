@@ -70,6 +70,43 @@ const Contactpage = () => {
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.843407043415!2d28.832234699999997!3d41.0505534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5145f62a9f9%3A0xd696cb5fbc62cbf2!2zSEFDSSDEsFNNQcSwTCBLVVJUIEXEnsSwVMSwTSBWQUtGSQ!5e0!3m2!1str!2str!4v1742326732820!5m2!1str!2str"></iframe>
                 </div>
             </section>
+            
+            <style jsx>{`
+                .office-info .row {
+                    display: flex;
+                    align-items: stretch;
+                }
+                .office-info-item {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 200px;
+                    padding: 30px 20px;
+                }
+                .office-info-text {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .office-info-text h2 {
+                    margin-bottom: 15px;
+                }
+                .office-info-text p {
+                    margin-bottom: 8px;
+                    line-height: 1.6;
+                }
+                .office-info-text p:last-child {
+                    margin-bottom: 0;
+                }
+                @media (max-width: 768px) {
+                    .office-info-item {
+                        min-height: 150px;
+                        margin-bottom: 20px;
+                    }
+                }
+            `}</style>
         </section>
      )
         

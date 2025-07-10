@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import MobileMenu from '../../components/MobileMenu'
 import Image from 'next/image'
+import Logo from '/public/images/logo.png'
 
 export default class Header extends Component {
 
@@ -54,9 +55,9 @@ export default class Header extends Component {
                                 </div>
                                 <div className="col-lg-3 col-md-6 col-6">
                                     <div className="navbar-header">
-                                        LOGO
-                                        {/* <Link onClick={ClickHandler} className="navbar-brand" href="/home"><Image src={this.props.Logo}
-                                            alt="" /></Link> */}
+                                        <Link onClick={ClickHandler} className="navbar-brand" href="/">
+                                            <Image src={this.props.Logo || Logo} alt="logo" />
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-1 col-1">
@@ -78,15 +79,15 @@ export default class Header extends Component {
                                             <li>
                                                 <Link href="/our-story" onClick={ClickHandler}>Hikevimiz</Link>
                                                 <ul className="sub-menu">
-                                                    <li><Link href="/our-story#our-purposes" onClick={(e) => smoothScroll(e, 'our-purposes')}>Amacımız</Link></li>
-                                                    <li><Link href="/our-story#our-goals" onClick={(e) => smoothScroll(e, 'our-goals')}>Hedeflerimiz</Link></li>
-                                                    <li><Link href="/our-story#our-actions" onClick={(e) => smoothScroll(e, 'our-actions')}>İcraatlerimiz</Link></li>
+                                                    <li><Link href="/our-purposes" onClick={ClickHandler}>Amacımız</Link></li>
+                                                    <li><Link href="/our-goals" onClick={ClickHandler}>Hedeflerimiz</Link></li>
+                                                    <li><Link href="/our-actions" onClick={ClickHandler}>İcraatlerimiz</Link></li>
                                                     <li><Link href="/our-story#our-founder" onClick={(e) => smoothScroll(e, 'our-founder')}>Kurucumuz</Link></li>
-                                                    <li><Link href="/our-story#career" onClick={(e) => smoothScroll(e, 'career')}>Kariyer</Link></li>
-                                                    <li><Link href="/our-story#identity" onClick={(e) => smoothScroll(e, 'identity')}>Kimliğimiz</Link></li>
-                                                    <li><Link href="/our-story#partners" onClick={(e) => smoothScroll(e, 'partners')}>Paydaş</Link></li>
-                                                    <li><Link href="/our-story#trustees" onClick={(e) => smoothScroll(e, 'trustees')}>Mütevelli</Link></li>
-                                                    <li><Link href="/our-story#managment" onClick={(e) => smoothScroll(e, 'managment')}>Yönetim</Link></li>
+                                                    <li><Link href="/career" onClick={ClickHandler}>Kariyer</Link></li>
+                                                    <li><Link href="/our-identity" onClick={ClickHandler}>Kimliğimiz</Link></li>
+                                                    <li><Link href="/partners" onClick={ClickHandler}>Paydaş</Link></li>
+                                                    <li><Link href="/trustees" onClick={ClickHandler}>Mütevelli</Link></li>
+                                                    <li><Link href="/management" onClick={ClickHandler}>Yönetim</Link></li>
                                                 </ul>
                                             </li>
                                             <li><Link onClick={ClickHandler} href="/about">Hakkımızda</Link></li>
