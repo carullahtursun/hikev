@@ -37,12 +37,12 @@ const ActionsList = (props) => {
                     position: relative;
                 }
                 .section-heading {
-                    color: #333;
+                    color: var(--hikev-primary-dark);
                     font-weight: 600;
                     margin-bottom: 15px;
                 }
                 .section-description {
-                    color: #666;
+                    color: var(--hikev-primary-dark);
                     font-size: 16px;
                     line-height: 1.6;
                 }
@@ -66,7 +66,7 @@ const ActionsList = (props) => {
                     left: 0;
                     width: 5px;
                     height: 100%;
-                    background: linear-gradient(45deg, #007bff, #28a745);
+                    background: var(--hikev-gradient);
                     transition: width 0.3s ease;
                 }
                 .action-item:hover {
@@ -87,12 +87,12 @@ const ActionsList = (props) => {
                     justify-content: center;
                     width: 50px;
                     height: 50px;
-                    background: linear-gradient(45deg, #007bff, #28a745);
+                    background: var(--hikev-gradient);
                     color: white;
                     border-radius: 50%;
                     font-weight: 600;
                     font-size: 18px;
-                    box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+                    box-shadow: 0 4px 15px var(--hikev-shadow-blue);
                 }
                 .action-content {
                     flex: 1;
@@ -100,7 +100,7 @@ const ActionsList = (props) => {
                 }
                 .action-content p {
                     margin: 0;
-                    color: #444;
+                    color: var(--hikev-primary-dark);
                     line-height: 1.8;
                     font-size: 16px;
                     text-align: justify;

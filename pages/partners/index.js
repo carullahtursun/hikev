@@ -6,7 +6,7 @@ import Scrollbar from '../../components/scrollbar'
 import Logo from '/public/images/logo.png'
 import AboutS4 from '../../components/AboutS4';
 import PartnerSection from '../../components/PartnerSection';
-import abimg from '/public/images/about6.jpg'
+import abimg from '/public/images/hikevimiz/paydas.png'
 
 const Partners = () => {
 

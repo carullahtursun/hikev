@@ -203,17 +203,19 @@ const menuData = [
     {
         id: 2,
         title: "Hikevimiz",
-        href: "/our-story",
+        href: "/#hikevimiz",
         submenu: [
-            {id:3, title: "Amacımız", href: "/our-story#our-purposes" },
-            {id:4,  title: "Hedeflerimiz", href: "/our-story#our-goals" },
-            {id:5, title: "İcraatlerimiz", href: "/our-story#our-actions" },
-            {id:6,  title: "Kurucumuz", href: "/our-story#our-founder" },
-            {id:7,  title: "Kariyer", href: "/our-story#career" },
-            {id:8,  title: "Kimliğimiz", href: "/our-story#identity" },
-            {id:9,  title: "Paydaş", href: "/our-story#partners" },
-            {id:10,  title: "Mütevelli", href: "/our-story#trustees" },
-            {id:11,  title: "Yönetim", href: "/our-story#managment" }
+            {id:3, title: "Amacımız", href: "/our-purposes" },
+            {id:4,  title: "Hedeflerimiz", href: "/our-goals" },
+            {id:5, title: "İcraatlerimiz", href: "/our-actions" },
+            {id:6,  title: "Kurucumuz", href: "/founder" },
+            {id:7,  title: "Kariyer", href: "/career" },
+            {id:8,  title: "Kimliğimiz", href: "/our-identity" },
+            {id:9,  title: "Paydaş", href: "/partners" },
+            {id:10,  title: "Mütevelli", href: "/trustees" },
+            {id:11,  title: "Yönetim", href: "/management" },
+            {id:12,  title: "Organizasyon", href: "/organization" },
+
         ]
     },
     {

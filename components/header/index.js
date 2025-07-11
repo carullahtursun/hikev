@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Link from "next/link";
 import MobileMenu from "../../components/MobileMenu";
 import Image from "next/image";
-import Logo from "/public/images/logo.png";
+import Logo from "/public/images/logo.svg";
 
 export default class Header extends Component {
   state = {
@@ -34,147 +34,154 @@ export default class Header extends Component {
     }
   };
 
-
-  
-
   render() {
     return (
-      <header id="header" className={this.props.topbarNone}>
-        <div className={`wpo-site-header ${this.props.hclass}`}>
-          <nav className="navigation navbar navbar-expand-lg navbar-light">
-            <div className="container-fluid">
-              <div className="row align-items-center">
-                <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
-                  <div className="mobail-menu">
-                    <MobileMenu />
+      <>
+        <header id="header" className={this.props.topbarNone}>
+          <div className={`wpo-site-header ${this.props.hclass}`}>
+            <nav className="navigation navbar navbar-expand-lg navbar-light">
+              <div className="container-fluid">
+                <div className="row align-items-center">
+                  <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+                    <div className="mobail-menu">
+                      <MobileMenu />
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-3 col-md-6 col-6">
-                  <div className="navbar-header">
-                    <Link
-                      onClick={this.ClickHandler}
-                      className="navbar-brand"
-                      href="/"
+                  <div className="col-lg-3 col-md-6 col-6">
+                    <div className="navbar-header">
+                      <Link
+                        onClick={this.ClickHandler}
+                        className="navbar-brand"
+                        href="/"
+                      >
+                        <Image src={Logo} alt="logo" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-md-1 col-1">
+                    <div
+                      id="navbar"
+                      className="collapse navbar-collapse navigation-holder"
                     >
-                      <Image src={this.props.Logo || Logo} alt="logo" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-1 col-1">
-                  <div
-                    id="navbar"
-                    className="collapse navbar-collapse navigation-holder"
-                  >
-                    <ul className="nav navbar-nav mb-2 mb-lg-0">
-                      <li>
-                        <Link onClick={this.ClickHandler} href="/">
-                          Ana Sayfa
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/our-story" onClick={this.ClickHandler}>
-                          Hikevimiz
-                        </Link>
-                        <ul className="sub-menu">
-                          <li>
-                            <Link href="/our-purposes" onClick={this.ClickHandler}>
-                              Amacımız
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/our-goals" onClick={this.ClickHandler}>
-                              Hedeflerimiz
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/our-actions" onClick={this.ClickHandler}>
-                              İcraatlerimiz
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/our-story#our-founder"
-                              onClick={(e) => this.smoothScroll(e, "our-founder")}
-                            >
-                              Kurucumuz
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/career" onClick={this.ClickHandler}>
-                              Kariyer
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/our-identity" onClick={this.ClickHandler}>
-                              Kimliğimiz
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/partners" onClick={this.ClickHandler}>
-                              Paydaş
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/trustees" onClick={this.ClickHandler}>
-                              Mütevelli
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/management" onClick={this.ClickHandler}>
-                              Yönetim
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link onClick={this.ClickHandler} href="/about">
-                          Hakkımızda
-                        </Link>
-                      </li>
-                      <li>
-                        <Link onClick={this.ClickHandler} href="/contact">
-                          İletişim
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-2 col-2">
-                  <div id="navbar" className="header-right">
-                    <div className="header-search-form-wrapper">
-                      <div className="cart-search-contact">
-                        <button className="search-toggle-btn">
-                          <Link href="/">
-                            <i className="ti-facebook"></i>
+                      <ul className="nav navbar-nav mb-2 mb-lg-0">
+                        <li>
+                          <Link onClick={this.ClickHandler} href="/">
+                            Ana Sayfa
                           </Link>
-                        </button>
-                      </div>
+                        </li>
+                        <li>
+                          <Link href="/#hikevimiz" onClick={this.ClickHandler}>
+                            Hikevimiz
+                          </Link>
+                          <ul className="sub-menu">
+                            <li>
+                              <Link
+                                href="/our-purposes"
+                                onClick={this.ClickHandler}
+                              >
+                                Amacımız
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/our-goals" onClick={this.ClickHandler}>
+                                Hedeflerimiz
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/our-actions" onClick={this.ClickHandler}>
+                                İcraatlerimiz
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="/founder"
+                                onClick={this.ClickHandler}
+                              >
+                                Kurucumuz
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/career" onClick={this.ClickHandler}>
+                                Kariyer
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/our-identity" onClick={this.ClickHandler}>
+                                Kimliğimiz
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/partners" onClick={this.ClickHandler}>
+                                Paydaş
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/trustees" onClick={this.ClickHandler}>
+                                Mütevelli
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/management" onClick={this.ClickHandler}>
+                                Yönetim
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/organization" onClick={this.ClickHandler}>
+                                Organizasyon
+                              </Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <Link onClick={this.ClickHandler} href="/about">
+                            Hakkımızda
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={this.ClickHandler} href="/contact">
+                            İletişim
+                          </Link>
+                        </li>
+                      </ul>
                     </div>
-                    <div className="header-search-form-wrapper">
-                      <div className="cart-search-contact">
-                        <button className="search-toggle-btn">
-                          <Link href="/">
-                            <i className="ti-twitter-alt"></i>
-                          </Link>
-                        </button>
+                  </div>
+                  <div className="col-lg-3 col-md-2 col-2">
+                    <div id="navbar" className="header-right">
+                      <div className="header-search-form-wrapper">
+                        <div className="cart-search-contact">
+                          <button className="search-toggle-btn">
+                            <Link href="/">
+                              <i className="ti-facebook"></i>
+                            </Link>
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div className="header-search-form-wrapper">
-                      <div className="cart-search-contact">
-                        <button className="search-toggle-btn">
-                          <Link href="/">
-                            <i className="ti-instagram"></i>
-                          </Link>
-                        </button>
+                      <div className="header-search-form-wrapper">
+                        <div className="cart-search-contact">
+                          <button className="search-toggle-btn">
+                            <Link href="/">
+                              <i className="ti-twitter-alt"></i>
+                            </Link>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="header-search-form-wrapper">
+                        <div className="cart-search-contact">
+                          <button className="search-toggle-btn">
+                            <Link href="/">
+                              <i className="ti-instagram"></i>
+                            </Link>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </nav>
-        </div>
-      </header>
+            </nav>
+          </div>
+        </header>
+      </>
     );
   }
 }

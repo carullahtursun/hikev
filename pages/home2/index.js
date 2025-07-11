@@ -11,7 +11,7 @@ import Scrollbar from '../../components/scrollbar'
 import PartnerSection from '../../components/PartnerSection';
 import FunFact from '../../components/FunFact';
 import ProjectSection from '../../components/ProjectSection';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 
 
 const HomePage =() => {

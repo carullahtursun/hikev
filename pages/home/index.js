@@ -10,7 +10,7 @@ import TeamSection from '../../components/TeamSection';
 import Testimonial from '../../components/Testimonial';
 import CtaSection from '../../components/ctaSection';
 import EventSection from '../../components/EventSection';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import vimg from '/public/images/volunteer.png'
 import BlogSection from '../../components/BlogSection';
 import PartnerSection from '../../components/PartnerSection';

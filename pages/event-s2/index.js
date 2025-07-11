@@ -4,7 +4,7 @@ import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
 import EventSection2 from '../../components/EventSection2';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 
 const EventPage =() => {
     return(

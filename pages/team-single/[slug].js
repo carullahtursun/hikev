@@ -6,7 +6,7 @@ import PageTitle from '../../components/pagetitle'
 import Scrollbar from '../../components/scrollbar'
 import Footer from '../../components/footer';
 import Image from 'next/image'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 
 
 

@@ -5,6 +5,7 @@ import '../styles/flaticon.css'
 import "../styles/font-awesome.min.css";
 import "../styles/themify-icons.css";
 import '../styles/sass/style.scss'
+import '../styles/globals.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "slick-carousel/slick/slick.css";

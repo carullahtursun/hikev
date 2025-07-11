@@ -6,7 +6,7 @@ import Scrollbar from '../../components/scrollbar'
 import Projects from '../../api/projects';
 import Services from '../../api/service';
 import Footer from '../../components/footer';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 

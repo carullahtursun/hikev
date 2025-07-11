@@ -4,7 +4,7 @@ import PageTitle from '../../components/pagetitle'
 import VideoSec from '../../components/VideoSec';
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import Service from '../../components/Service';
 import AboutS2 from '../../components/AboutS2';
 import FunFact from '../../components/FunFact';

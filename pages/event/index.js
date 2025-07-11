@@ -3,7 +3,7 @@ import Navbar2 from '../../components/Navbar2';
 import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import EventSection from '../../components/EventSection';
 
 const EventPage =() => {

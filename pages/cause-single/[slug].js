@@ -5,7 +5,7 @@ import Navbar2 from '../../components/Navbar2';
 import PageTitle from '../../components/pagetitle'
 import Scrollbar from '../../components/scrollbar'
 import Footer from '../../components/footer';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import CauseTabs from './alltab';
 import CauseSidebar from './sidebar';
 import Image from 'next/image';

@@ -3,24 +3,23 @@ import Navbar from '../../components/Navbar'
 import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
+import TeamSection2 from '../../components/TeamSection2';
 import AboutS4 from '../../components/AboutS4';
-import TeamSection from '../../components/TeamSection';
-import abimg from '/public/images/about6.jpg'
+import abimg from '/public/images/hikevimiz/mutevelli.png'
 
 const Trustees = () => {
 
     const trusteesData = {
         title: "Mütevelli Heyeti",
-        description: "Vakfımızın yönetim ve denetim organlarında görev alan mütevelli heyeti üyeleri:",
+        description: "Hacı İsmail Kurt Eğitim Vakfı'nın mütevelli heyeti, vakfın stratejik yönünü belirleyen ve denetleyen üyelerden oluşur. Bu heyet, vakfın misyonunu gerçekleştirmek için gerekli kararları alır ve kaynakların etkin kullanımını sağlar.",
         points: [
-            "Vakıf senedinde belirtilen amaçlar doğrultusunda faaliyet gösterme",
-            "Vakfın mali durumunu izleme ve denetleme",
-            "Stratejik kararların alınmasında aktif rol alma",
-            "Vakfın toplumsal misyonunu gerçekleştirme",
-            "Yasal yükümlülüklerin yerine getirilmesini sağlama",
-            "Vakıf varlıklarının korunması ve geliştirilmesi",
-            "Hesap verebilirlik ve şeffaflık ilkelerini uygulama"
+            "Vakfın misyon ve vizyonunu belirler",
+            "Stratejik planların oluşturulması ve uygulanması",
+            "Mali denetim ve raporlama süreçlerini yönetir",
+            "Kaynakların etkin kullanımı için kararlar alır",
+            "Toplulukla ilişkileri güçlendirir",
+            "Vakıf faaliyetlerinin şeffaflığını sağlar"
         ]
     };
 
@@ -32,9 +31,9 @@ const Trustees = () => {
                 pageData={trusteesData} 
                 abClass={'wpo-about-section-s6'} 
                 abImg={abimg} 
-                Atitle={'Vakıf Yönetimi'} 
+                Atitle={'Hacı İsmail Kurt Eğitim Vakfı Mütevelli Heyeti'} 
             />
-            <TeamSection />
+            <TeamSection2 pageType="trustees" />
             <Footer/>
             <Scrollbar/>
         </Fragment>

@@ -4,7 +4,7 @@ import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
 import Error from '../../components/404';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 
 const StoryPage = (props) => {
 

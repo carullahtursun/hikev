@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar'
 import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import AboutS2 from '../../components/AboutS2';
 import AccordionSection from '../../components/AccordionSection';
 import FunFact from '../../components/FunFact';

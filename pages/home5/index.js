@@ -5,7 +5,7 @@ import Service4 from '../../components/Service4';
 import AboutS4 from '../../components/AboutS4';
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import PartnerSection from '../../components/PartnerSection';
 import TeamSection2 from '../../components/TeamSection2';
 import BlogSection4 from '../../components/BlogSection4';

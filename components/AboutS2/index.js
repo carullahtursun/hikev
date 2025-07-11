@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import abimg from '/public/images/ab.png'
+import abimg from '/public/images/kurucu.jpg'
 import Image from 'next/image'
 
 const AboutS2 = (props) => {

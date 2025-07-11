@@ -8,7 +8,7 @@ const Hero6 = (props) => {
 
 
     const slidesData = [
-        {
+        /* {
             id: 1,
             image: '/images/slider/slide-1.jpg',
             title: 'Eğitime Destek, Geleceğe Yatırım.',
@@ -19,10 +19,10 @@ const Hero6 = (props) => {
             image: '/images/slider/slide-2.jpg',
             title: 'Bağışlarınızla Umut Olun.',
             subtitle: 'Bağışlarınızla daha fazla öğrenciye destek olabilirsiniz.'
-        },
+        }, */
         {
             id: 3,
-            image: '/images/slider/slide-3.jpg',
+            image: '/images/slider/home-1.jpg',
             title: 'Birlikte Daha Güçlüyüz.',
             subtitle: 'Topluma katkı sağlamak için birlikte çalışalım.'
         }

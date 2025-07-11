@@ -6,7 +6,7 @@ import Scrollbar from '../../components/scrollbar'
 import Logo from '/public/images/logo.png'
 import AboutS4 from '../../components/AboutS4';
 import TeamSection2 from '../../components/TeamSection2';
-import abimg from '/public/images/about6.jpg'
+import abimg from '/public/images/hikevimiz/yonetim.png'
 
 const Management = () => {
 
@@ -32,7 +32,7 @@ const Management = () => {
                 pageData={managementData} 
                 abClass={'wpo-about-section-s6'} 
                 abImg={abimg} 
-                Atitle={'Operasyonel Yönetim'} 
+                Atitle={'Hacı İsmail Kurt Eğitim Vakfı Yönetim Ekibi'} 
             />
             <TeamSection2 />
             <Footer/>

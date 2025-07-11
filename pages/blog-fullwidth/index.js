@@ -4,7 +4,7 @@ import BlogList from '../../components/BlogList'
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/footer';
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 
 const BlogSingle = (props) => {
 

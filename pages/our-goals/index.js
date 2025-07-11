@@ -3,9 +3,9 @@ import Navbar from '../../components/Navbar'
 import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import AboutS4 from '../../components/AboutS4';
-import abimg from '/public/images/about6.jpg'
+import abimg from '/public/images/hikevimiz/hedefimiz.png'
 
 const OurGoals = () => {
 

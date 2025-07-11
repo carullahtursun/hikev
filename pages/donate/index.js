@@ -3,7 +3,7 @@ import Navbar2 from '../../components/Navbar2';
 import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import pimg from '/public/images/checkout/img-1.png'
 import pimg2 from '/public/images/checkout/img-2.png'
 import pimg3 from '/public/images/checkout/img-3.png'

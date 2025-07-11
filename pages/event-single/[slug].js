@@ -7,7 +7,7 @@ import Scrollbar from '../../components/scrollbar'
 import EventTabs from './alltab'
 import EventSidebar from './sidebar'
 import Footer from '../../components/footer';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import Image from 'next/image';
 
 

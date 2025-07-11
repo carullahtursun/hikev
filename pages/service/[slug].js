@@ -6,7 +6,7 @@ import PageTitle from '../../components/pagetitle';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/footer';
 import Scrollbar from '../../components/scrollbar';
-import Logo from '/public/images/logo.png'
+import Logo from '/public/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import Benefits from './single/benefits';

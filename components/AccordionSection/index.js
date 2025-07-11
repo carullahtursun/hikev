@@ -123,13 +123,13 @@ Gönüllülükle mücehhez Vakıf HİKEV'in mütevelli, yönetici ve çalışan 
                     border-left: 4px solid transparent;
                 }
                 .accordion-header:hover {
-                    background: #e9ecef;
-                    border-left-color: #007bff;
+                    background: var(--hikev-gray-hover);
+                    border-left-color: var(--hikev-primary-light);
                 }
                 .accordion-header.active {
-                    background: #007bff;
-                    color: white;
-                    border-left-color: #0056b3;
+                    background: var(--hikev-primary-dark);
+                    color: var(--hikev-white);
+                    border-left-color: var(--hikev-primary-light);
                 }
                 .accordion-header h4 {
                     margin: 0;
@@ -156,7 +156,7 @@ Gönüllülükle mücehhez Vakıf HİKEV'in mütevelli, yönetici ve çalışan 
                     background: white;
                 }
                 .content-inner p {
-                    color: #555;
+                    color: var(--hikev-primary-dark);
                     line-height: 1.8;
                     margin: 0;
                     font-size: 15px;

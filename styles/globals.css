@@ -1,0 +1,214 @@
+/* HİKEV Global Color System */
+:root {
+  /* Primary Colors - Logo Colors */
+  --hikev-primary-dark: #003764;     /* Logo yazı rengi - Koyu mavi */
+  --hikev-primary-light: #00b3e3;   /* Logo icon rengi - Açık mavi */
+  
+  /* Secondary Colors */
+  --hikev-white: #ffffff;
+  --hikev-gray-light: #f8f9fa;
+  --hikev-gray-border: #e9ecef;
+  --hikev-gray-hover: #e9ecef;
+  
+  /* Gradient Colors */
+  --hikev-gradient: linear-gradient(45deg, var(--hikev-primary-dark), var(--hikev-primary-light));
+  
+  /* Shadow Colors */
+  --hikev-shadow-light: rgba(0, 0, 0, 0.1);
+  --hikev-shadow-medium: rgba(0, 0, 0, 0.15);
+  --hikev-shadow-blue: rgba(0, 179, 227, 0.3);
+}
+
+/* Global Text Colors */
+.text-primary {
+  color: var(--hikev-primary-dark) !important;
+}
+
+.text-accent {
+  color: var(--hikev-primary-light) !important;
+}
+
+/* Global Background Colors */
+.bg-primary {
+  background-color: var(--hikev-primary-dark) !important;
+}
+
+.bg-accent {
+  background-color: var(--hikev-primary-light) !important;
+}
+
+.bg-gradient {
+  background: var(--hikev-gradient) !important;
+}
+
+/* Global Hover Effects */
+.hover-accent:hover {
+  color: var(--hikev-primary-light) !important;
+}
+
+.hover-primary:hover {
+  color: var(--hikev-primary-dark) !important;
+}
+
+/* Global Shadow Classes */
+.shadow-light {
+  box-shadow: 0 2px 10px var(--hikev-shadow-light);
+}
+
+.shadow-medium {
+  box-shadow: 0 5px 15px var(--hikev-shadow-medium);
+}
+
+.shadow-blue {
+  box-shadow: 0 4px 15px var(--hikev-shadow-blue);
+}
+
+/* Header Global Styles */
+.wpo-site-header {
+  background-color: var(--hikev-white) !important;
+  box-shadow: 0 2px 10px var(--hikev-shadow-light);
+}
+
+.navigation.navbar {
+  background-color: var(--hikev-white) !important;
+}
+
+.navbar-nav li a {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+.navbar-nav li a:hover {
+  color: var(--hikev-primary-light) !important;
+}
+
+.sub-menu {
+  background-color: var(--hikev-white) !important;
+  box-shadow: 0 5px 15px var(--hikev-shadow-medium);
+  border: 1px solid var(--hikev-gray-border);
+}
+
+.sub-menu li a {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 500 !important;
+  padding: 12px 20px !important;
+  border-bottom: 1px solid var(--hikev-gray-light);
+}
+
+.sub-menu li a:hover {
+  color: var(--hikev-white) !important;
+  background-color: var(--hikev-primary-light) !important;
+}
+
+.header-right a {
+  color: var(--hikev-primary-dark) !important;
+}
+
+.header-right a:hover {
+  color: var(--hikev-primary-light) !important;
+}
+
+/* Footer Global Styles */
+footer {
+  background-color: var(--hikev-white) !important;
+  color: var(--hikev-primary-dark) !important;
+  box-shadow: 0 -2px 15px var(--hikev-shadow-light);
+}
+
+footer .footer-description {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+footer .widget-title h3 {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+}
+
+footer .widget ul li a {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 500 !important;
+}
+
+footer .widget ul li a:hover {
+  color: var(--hikev-primary-light) !important;
+}
+
+footer .contact-ft p {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 500 !important;
+}
+
+footer .contact-ft ul li {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 500 !important;
+}
+
+footer .contact-ft ul li i {
+  color: var(--hikev-primary-light) !important;
+  margin-right: 10px !important;
+}
+
+footer .wpo-lower-footer {
+  background-color: var(--hikev-gray-light) !important;
+  border-top: 1px solid var(--hikev-gray-border);
+}
+
+footer .copyright {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 500 !important;
+}
+
+footer .copyright a {
+  color: var(--hikev-primary-light) !important;
+  font-weight: 600 !important;
+}
+
+/* Components Global Styles */
+.section-heading {
+  color: var(--hikev-primary-dark) !important;
+  font-weight: 600 !important;
+}
+
+.section-description {
+  color: var(--hikev-primary-dark) !important;
+}
+
+/* Action Items */
+.action-item {
+  background: var(--hikev-white);
+  border: 1px solid var(--hikev-gray-border);
+}
+
+.action-item::before {
+  background: var(--hikev-gradient);
+}
+
+.item-number {
+  background: var(--hikev-gradient);
+  box-shadow: 0 4px 15px var(--hikev-shadow-blue);
+}
+
+.action-content p {
+  color: var(--hikev-primary-dark) !important;
+}
+
+/* Accordion Styles */
+.accordion-header:hover {
+  background: var(--hikev-gray-hover);
+  border-left-color: var(--hikev-primary-light);
+}
+
+.accordion-header.active {
+  background: var(--hikev-primary-dark);
+  color: var(--hikev-white);
+  border-left-color: var(--hikev-primary-light);
+}
+
+.accordion-content p {
+  color: var(--hikev-primary-dark) !important;
+}
