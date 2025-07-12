@@ -12,11 +12,7 @@ const OurIdentity = () => {
     const identityData = {
         title: "Kurumsal Kimliğimiz",
         description: "Gönüllülükle terkip ve teçhiz olan bir vakıf kuruluşu olarak; Medeni Hukuk çerçevesinde Vakıflar Genel Müdürlüğüne bağlı, idari ve yasal mevzuatı 5737 Sayılı Vakıf Yasası ile çerçeveli bir Toplum Gönüllü Teşekkülü / bir TG.T'yiz.",
-        points: [
-            "Amblem: Vakfımızın resmi amblemi",
-            "Logo: Kurumsal kimliğimizin görsel temsilcisi",
-            "Motto: 'Hayır ve İlim, Kültür ve Eğitim'"
-        ]
+        points: []
     };
 
     return(
