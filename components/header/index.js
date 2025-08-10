@@ -130,6 +130,16 @@ export default class Header extends Component {
                                 Organizasyon
                               </Link>
                             </li>
+                            <li>
+                              <Link href="/scholarships" onClick={this.ClickHandler}>
+                                Burs ve Eğitim
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/donation" onClick={this.ClickHandler}>
+                                Bağış
+                              </Link>
+                            </li>
                           </ul>
                         </li>
                         <li>

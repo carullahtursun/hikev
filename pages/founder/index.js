@@ -5,7 +5,7 @@ import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
 import Logo from '/public/images/logo.svg'
 import AboutS4 from '../../components/AboutS4'
-import abimg from '/public/images/kurucu.jpg'
+import abimg from '/public/images/haci_ismail_kurt.jpg'
 
 const Founder = () => {
 

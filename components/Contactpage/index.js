@@ -46,7 +46,7 @@ const Contactpage = () => {
                                             </div>
                                         </div>
                                         <div className="office-info-text">
-                                            <h2>Hemen Ara</h2>
+                                            <h2>İletişim</h2>
                                             <p>+0216 339 09 00</p>
                                             <p>+0216 339 09 01</p>
                                         </div>

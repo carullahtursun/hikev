@@ -25,7 +25,7 @@ const NoPoint = (props) => {
 
   return (
     <section
-      className={`wpo-about-section-s4 section-padding ${props.abClass}`}
+      className={`wpo-about-section-s4 section-padding  ${props.abClass}  `}
     >
       <div className="container">
         <div className="wpo-about-items">

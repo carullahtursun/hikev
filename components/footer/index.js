@@ -21,7 +21,7 @@ const Footer = (props) => {
                 </div>
                 <p className="footer-description">
                   Hikev Vakfımız, topluma hizmet etmeyi amaçlayan bir sivil
-                  toplum kuruluşudur. Eğitim, sağlık ve çevre konularında
+                  toplum kuruluşudur. Eğitim ve çevre konularında
                   projeler yürütmektedir.
                 </p>
                 <ul>
