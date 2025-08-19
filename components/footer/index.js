@@ -90,10 +90,10 @@ const Footer = (props) => {
                   </p>
                   <ul>
                     <li>
-                      <i className="fi flaticon-mail"></i>hikev@gmail.com
+                      <i className="fi flaticon-mail"></i>hikevorg@gmail.com
                     </li>
                     <li>
-                      <i className="fi flaticon-phone-call"></i>+0216 339 09 00
+                      <i className="fi flaticon-phone-call"></i>+0216 339 47 47
                     </li>
                     <li>
                       <i className="fi flaticon-location"></i>F. K. Gökay Cad.

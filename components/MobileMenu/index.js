@@ -216,6 +216,7 @@ const menuData = [
             {id:11,  title: "Yönetim", href: "/management" },
             {id:12,  title: "Organizasyon", href: "/organization" },
             {id:13,  title: "Burs ve Eğitim", href: "/scholarships" },
+            {id:14,  title: "Faaliyetler", href: "/activities" },
 
         ]
     },

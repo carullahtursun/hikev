@@ -7,16 +7,19 @@ import abimg from "/public/images/about6.jpg";
 import NoPoint from "../../components/NoPoint";
 import Service from "../../components/Service";
 import FunFact from "../../components/FunFact";
+import FoundationIntro from "../../components/FoundationIntro";
 
 const HomePage6 = () => {
   return (
     <Fragment>
       <Navbar Logo={Logo} hclass={"wpo-header-style-4"} />
       <Hero6 heroClass={"wpo-hero-section-6"} />
-      {/*     <Service5/> */}
-      <Service Fclass={"wpo-features-section-s2"} vclassClass={"v1"} />
-      {/* <NoPoint abClass={'wpo-about-section-s6'} abImg={abimg} Atitle={'We are Protecting Wildlife With All Our Dedication'}/> */}
-      <FunFact />
+      
+      {/* Vakıf Tanıtım Bölümü */}
+      <FoundationIntro />
+      
+    {/*   <Service Fclass={"wpo-features-section-s2"} vclassClass={"v1"} />
+      <FunFact /> */}
       <Footer />
     </Fragment>
   );
