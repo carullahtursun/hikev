@@ -5,87 +5,138 @@ import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
 import Logo from '/public/images/logo.svg'
 import Image from 'next/image'
+import styles from '../../styles/activities.module.css'
 
 const Activities = (props) => {
-    // Tanıtım fotoğrafları
-    const activityImages = [
+    // Aktivite kategorileri
+    const activitiesData = [
         {
             id: 1,
-            src: '/images/tanitim/HİKEV Tanıtım (1).png',
-            title: 'Bursiyerlerle Geleneksel Kahvaltı',
-            description: 'Bursiyerlerimizle düzenlediğimiz geleneksel kahvaltı buluşmaları'
+            title: "Alan Bazlı Kariyer Danışmanlık Toplantıları (yüz yüze ve çevrimiçi)",
+            description: "Öğrenciler, alanında uzman isimlerle bir araya gelerek kariyer planlarını ve mesleki yönelimlerini netleştirdi.",
+            folderName: "kariyer-danismanlik",
+            images: [
+                "20250211_105654.jpg",
+                "20250211_100720.jpg",
+                "20241225_165409.jpg",
+                "20241218_101158.jpg"
+            ]
         },
         {
             id: 2,
-            src: '/images/tanitim/HİKEV Tanıtım (2).png',
-            title: 'Bursiyerlerle Geleneksel Kahvaltı',
-            description: 'Öğrencilerimizle samimi bir ortamda buluşma imkânı'
+            title: "Eğitim Panelleri",
+            description: "Farklı alanlarda uzman isimlerin katılımıyla gençlere ilham veren bilgi ve deneyim paylaşımları gerçekleştirildi.",
+            folderName: "egitim-panelleri",
+            images: [
+                "20250225_132841.jpg",
+                "20250225_140029.jpg",
+                "20250225_150743.jpg",
+                "Ekran görüntüsü 2025-04-21 152941.png",
+                "Ekran görüntüsü 2025-04-21 153003.png",
+                "IMG-20250225-WA0081.jpg"
+            ]
         },
         {
             id: 3,
-            src: '/images/tanitim/HİKEV Tanıtım (3).png',
-            title: 'Buluşma ve Yarışma Programları',
-            description: 'Bursiyerlerimizi bir araya getiren buluşma programları'
+            title: "Geleceğin Liderleri Gelişim Programı",
+            description: "10 haftalık programda gençlere liderlik, dijital dönüşüm ve kişisel gelişim alanlarında online eğitimler sunuldu.",
+            folderName: "liderlik-programi",
+            images: [
+                "20250123_151809.jpg",
+                "336466778_223125036961371_6964364667368133977_n.jpg",
+                "327018146_1134460121289166_6209474338311826061_n.jpg"
+            ]
         },
         {
             id: 4,
-            src: '/images/tanitim/HİKEV Tanıtım (4).png',
-            title: 'Eğitim ve Kültür Yarışmaları',
-            description: 'Gençleri eğitim ve kültür temalı yarışmalarla buluşturuyoruz'
+            title: "Kitap Okuma Bursu",
+            description: "Gençlerin entelektüel gelişimini desteklemek amacıyla hazırlanan okuma listesiyle öğrencilerimize burs desteği sağladık.",
+            folderName: "kitap-okuma-bursu",
+            images: [
+                "353925171_183035967764337_2659411788172047445_n.jpg"
+            ]
         },
         {
             id: 5,
-            src: '/images/tanitim/HİKEV Tanıtım (5).png',
-            title: 'Alan Bazlı Kariyer Danışmanlığı',
-            description: 'Gençlerin mesleki gelişimlerine yönelik kariyer danışmanlık toplantıları'
+            title: "Kız İzcilerimizle Kamptayız!",
+            description: "İzcilerimiz, açık havada düzenlenen eğitimlerle hem eğlendi hem de liderlik ve dayanışma becerilerini geliştirdi.",
+            folderName: "kiz-izci-kampi",
+            images: [
+                "IMG-20250208-WA0021.jpg",
+                "IMG-20250123-WA0015.jpg",
+                "461178980_1059831882337115_5352913566669173313_n.jpg"
+            ]
         },
         {
             id: 6,
-            src: '/images/tanitim/HİKEV Tanıtım (6).png',
-            title: 'Eğitim Panelleri',
-            description: 'Alanında uzman isimlerin katılımıyla eğitim panelleri'
+            title: "Erkek İzcilerimizle Kamptayız!",
+            description: "Doğa ile iç içe etkinlikler ve takım ruhunu güçlendiren çalışmalarla izcilerimiz unutulmaz bir kamp deneyimi yaşadı.",
+            folderName: "erkek-izci-kampi",
+            images: [
+                "IMG-20250124-WA0004.jpg",
+                "WhatsApp Image 2025-04-21 at 16.32.06.jpeg",
+                "WhatsApp Image 2025-04-21 at 16.33.01 (1).jpeg",
+                "WhatsApp Image 2025-04-21 at 16.33.02.jpeg"
+            ]
         },
         {
             id: 7,
-            src: '/images/tanitim/HİKEV Tanıtım (7).png',
-            title: 'Kitap Okuma Bursu Programı',
-            description: 'Gençlerin entelektüel gelişimini destekleyen kitap okuma bursu'
+            title: "Kubbede Kalan Hoş Sada",
+            description: "Geçmişten bugüne Türk kültürü ve edebiyatını hatırlatmayı amaçlayan yarışma, Üsküdar Üniversitesi'nde gerçekleştirildi. Katılımcılara sürpriz hediyeler ve altın ödülleri verildi, herkese katılım belgesi takdim edildi.",
+            folderName: "kubbede-hos-sada",
+            images: [
+                "20250511_173333.jpg",
+                "20250511_143309.jpg"
+            ]
         },
         {
             id: 8,
-            src: '/images/tanitim/HİKEV Tanıtım (8).png',
-            title: 'Ufuk Yıldızları İzcilik Kulübü',
-            description: 'Doğada eğitim ile ahlaklı bireyler yetiştiren izcilik faaliyetleri'
+            title: "Büyük Çamlıca'da İzcilik Ruhu ve Okulu",
+            description: "Üsküdar İmam Hatip Ortaokulu öğretmen ve öğrencileriyle düzenlenen izcilik tanıtım kampında, doğayla iç içe keyifli bir gün geçirildi. Ardından okul ziyareti yapılarak eğitim ve değerler üzerine verimli istişareler gerçekleştirildi.",
+            folderName: "camlica-izcilik",
+            images: [
+                "20250611_134934.jpg",
+                "IMG-20250611-WA0045.jpg",
+                "IMG-20250611-WA0046.jpg",
+                "IMG-20250611-WA0047.jpg"
+            ]
         },
         {
             id: 9,
-            src: '/images/tanitim/HİKEV Tanıtım (9).png',
-            title: 'İzcilerle Doğa Eğitimi',
-            description: 'Ruhsal, fiziksel, zihinsel gelişimi destekleyen doğa kampları'
+            title: "Buluşma ve Yarışma Programları",
+            description: "Bursiyerlerin bir araya geldiği programlar, eğitim ve kültür temalı yarışmalarla zenginleştiriliyor. Böylece buluşmalar daha anlamlı ve kalıcı hale getiriliyor.",
+            folderName: "bulusma-yarisma",
+            images: [
+                "409645872_868081465058346_2957398391146264618_n.jpg",
+                "Ekran görüntüsü 2025-04-21 132122.png",
+                "Ekran görüntüsü 2025-04-21 132324.png",
+                "Ekran görüntüsü 2025-04-21 132534.png"
+            ]
         },
         {
             id: 10,
-            src: '/images/tanitim/HİKEV Tanıtım (10).png',
-            title: 'İzcilik Kulübü Etkinlikleri',
-            description: '126 genç izci ve 30 gönüllü ile gerçekleştirilen etkinlikler'
+            title: "Bursiyerlerle Geleneksel Kahvaltı Buluşmaları",
+            description: "Her yıl düzenlenen kahvaltı buluşmalarında bursiyerler bir araya geliyor. Bu etkinlikler gençler arasında dayanışmayı ve vakıf ile iletişimi güçlendiriyor.",
+            folderName: "kahvalti-bulusmalari",
+            images: [
+                "324061091_748880522843319_4148202789339331607_n.jpg",
+                "324716450_697113881871984_6852694886725301276_n.jpg"
+            ]
         },
         {
             id: 11,
-            src: '/images/tanitim/HİKEV Tanıtım (11).png',
-            title: 'Kız İzciler Kampı',
-            description: 'Kız izcilerimizle düzenlenen kamp programları'
-        },
-        {
-            id: 12,
-            src: '/images/tanitim/HİKEV Tanıtım (12).png',
-            title: 'Hacı İsmail Kurt Merkezi Derslikler Binası',
-            description: 'İstanbul Sabahattin Zaim Üniversitesi\'ne kazandırdığımız eğitim binası açılış töreni'
-        },
-        {
-            id: 13,
-            src: '/images/tanitim/HİKEV Tanıtım (13).jpg',
-            title: 'Derslikler Binası Açılış Töreni',
-            description: 'HİKEV\'in üniversiteye kazandırdığı Hacı İsmail Kurt Merkezi Derslikler Binası açılış anı'
+            title: "Hacı İsmail Kurt Merkezi Derslikler Binası Açılış Töreni",
+            description: "Eğitime kalıcı katkı sağlamak amacıyla İstanbul Sabahattin Zaim Üniversitesi'nde \"Merkezi Derslikler Binası\" inşa edilerek hizmete açıldı. Bu proje, vakfın eğitime verdiği önemin somut bir göstergesi oldu.",
+            folderName: "ismail-kurt-derslik",
+            images: [
+                "6.jpeg",
+                "9.jpg",
+                "8.jpg",
+                "5.jpeg",
+                "41def6a58ccba4dfaad31a14603acd8e4.jpg",
+                "1ab4eead7e7244e04b9fdf1ca3dbda6fd.jpeg",
+                "10.jpeg"
+            ]
         }
     ];
 
@@ -95,194 +146,65 @@ const Activities = (props) => {
             <PageTitle pageTitle={'Faaliyetler'} pagesub={'Hikevimiz'} pageTop={'Faaliyetler'} />
             
             {/* Ana Açıklama Bölümü */}
-            <div className="wpo-activities-intro-section p-5">
+            <div className={`${styles['wpo-activities-intro-section']} p-5`}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
-                            <div className="wpo-section-title text-center">
-                                <h2>Faaliyetlerimiz</h2>
-                                <h3>Hacı İsmail Kurt Eğitim Vakfı olarak, eğitim alanında gerçekleştirdiğimiz çeşitli faaliyetler ve projelerle topluma değer katmaya devam ediyoruz. İşte bizim için önemli olan bazı anlar ve çalışmalarımız...</h3>
+                            <div className={styles['wpo-section-title']}>
+                                <h1 className='text-center'>Faaliyetlerimiz</h1>
+                                <p className='text-center'>Hacı İsmail Kurt Eğitim Vakfı olarak, eğitim alanında gerçekleştirdiğimiz çeşitli faaliyetler ve projelerle topluma değer katmaya devam ediyoruz. Her bir aktivitemiz, gençlerimizin kişisel ve mesleki gelişimine katkı sağlamayı hedeflemektedir.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Fotoğraf Galerisi */}
-            <div className="wpo-activities-gallery-section p-5">
-                <div className="container">
-                    <div className="activities-gallery">
-                        <div className="row">
-                            {activityImages.map((image, index) => (
-                                <div key={image.id} className="col-lg-4 col-md-6 col-12">
-                                    <div className="activity-item">
-                                        <div className="activity-img">
-                                            <Image 
-                                                src={image.src} 
-                                                alt={image.title}
-                                                width={400}
-                                                height={300}
-                                                style={{
-                                                    width: '100%',
-                                                    height: '250px',
-                                                    objectFit: 'cover'
-                                                }}
-                                            />
-                                            <div className="activity-overlay">
-                                                <div className="activity-content">
-                                                    <h4>{image.title}</h4>
-                                                    <p>{image.description}</p>
-                                                </div>
+            {/* Aktivite Bölümleri */}
+            <div className={styles['wpo-activities-sections']}>
+                {activitiesData.map((activity, index) => (
+                    <div key={activity.id} className={`${styles['activity-section']} ${index % 2 === 0 ? styles.even : styles.odd}`}>
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-lg-12">
+                                    <div className={styles['activity-content']}>
+                                        <div className={styles['activity-header']}>
+                                            <h3>{activity.title}</h3>
+                                            <p>{activity.description}</p>
+                                        </div>
+                                        
+                                        {/* Fotoğraf Galerisi */}
+                                        <div className={styles['activity-gallery']}>
+                                            <div className="row justify-content-center">
+                                                {activity.images.map((image, imgIndex) => (
+                                                    <div key={imgIndex} className="col-lg-4 col-md-6 col-12">
+                                                        <div className={styles['gallery-item']}>
+                                                            <Image 
+                                                                src={`/images/activities/${activity.folderName}/${image}`}
+                                                                alt={`${activity.title} - ${imgIndex + 1}`}
+                                                                width={400}
+                                                                height={300}
+                                                                style={{
+                                                                    width: '100%',
+                                                                    height: '300px',
+                                                                    objectFit: 'cover',
+                                                                    borderRadius: '8px'
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
 
             <Footer/>
             <Scrollbar/>
-            
-            <style jsx>{`
-                .wpo-activities-intro-section {
-                    background: var(--hikev-gray-light);
-                    position: relative;
-                }
-                
-                .wpo-activities-intro-section h2 {
-                    color: var(--hikev-primary-dark);
-                    font-size: 36px;
-                    font-weight: 700;
-                    margin-bottom: 20px;
-                }
-                
-                .wpo-activities-intro-section p {
-                    color: var(--hikev-primary-dark);
-                    font-size: 16px;
-                    line-height: 1.7;
-                    margin: 0;
-                }
-                
-                .wpo-activities-gallery-section {
-                    background: var(--hikev-white);
-                    position: relative;
-                }
-                
-                .activities-gallery .row {
-                    gap: 30px 0;
-                }
-                
-                .activity-item {
-                    background: var(--hikev-white);
-                    border-radius: 15px;
-                    overflow: hidden;
-                    box-shadow: 0 5px 20px var(--hikev-shadow-light);
-                    transition: all 0.3s ease;
-                    margin-bottom: 30px;
-                }
-                
-                .activity-item:hover {
-                    transform: translateY(-8px);
-                    box-shadow: 0 15px 40px var(--hikev-shadow-medium);
-                }
-                
-                .activity-img {
-                    position: relative;
-                    overflow: hidden;
-                }
-                
-                .activity-img img {
-                    transition: all 0.3s ease;
-                }
-                
-                .activity-item:hover .activity-img img {
-                    transform: scale(1.05);
-                }
-                
-                .activity-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background: linear-gradient(
-                        45deg, 
-                        rgba(0, 55, 100, 0.9), 
-                        rgba(0, 179, 227, 0.9)
-                    );
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    opacity: 0;
-                    transition: all 0.3s ease;
-                }
-                
-                .activity-item:hover .activity-overlay {
-                    opacity: 1;
-                }
-                
-                .activity-content {
-                    text-align: center;
-                    padding: 20px;
-                    transform: translateY(20px);
-                    transition: all 0.3s ease;
-                }
-                
-                .activity-item:hover .activity-content {
-                    transform: translateY(0);
-                }
-                
-                .activity-content h4 {
-                    color: var(--hikev-white);
-                    font-size: 20px;
-                    font-weight: 600;
-                    margin-bottom: 10px;
-                }
-                
-                .activity-content p {
-                    color: var(--hikev-white);
-                    font-size: 14px;
-                    line-height: 1.5;
-                    margin: 0;
-                }
-                
-                @media (max-width: 991px) {
-                    .wpo-activities-intro-section h2 {
-                        font-size: 30px;
-                    }
-                    
-                    .activity-item {
-                        margin-bottom: 25px;
-                    }
-                }
-                
-                @media (max-width: 767px) {
-                    .wpo-activities-intro-section h2 {
-                        font-size: 26px;
-                    }
-                    
-                    .activity-content h4 {
-                        font-size: 18px;
-                    }
-                    
-                    .activity-content p {
-                        font-size: 13px;
-                    }
-                }
-                
-                @media (max-width: 576px) {
-                    .activities-gallery .col-12 {
-                        padding: 0 10px;
-                    }
-                    
-                    .activity-item {
-                        margin-bottom: 20px;
-                    }
-                }
-            `}</style>
         </Fragment>
     )
 };
