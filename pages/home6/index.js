@@ -8,15 +8,18 @@ import NoPoint from "../../components/NoPoint";
 import Service from "../../components/Service";
 import FunFact from "../../components/FunFact";
 import FoundationIntro from "../../components/FoundationIntro";
+import ActivitiesSections from "../../components/ActivitiesSections";
+import styles from "../../styles/Activities.module.css";
 
 const HomePage6 = () => {
   return (
     <Fragment>
       <Navbar Logo={Logo} hclass={"wpo-header-style-4"} />
       <Hero6 heroClass={"wpo-hero-section-6"} />
-      
+    
+      <ActivitiesSections />
       {/* Vakıf Tanıtım Bölümü */}
-      <FoundationIntro />
+   {/*    <FoundationIntro /> */}
       
     {/*   <Service Fclass={"wpo-features-section-s2"} vclassClass={"v1"} />
       <FunFact /> */}

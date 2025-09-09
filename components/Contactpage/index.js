@@ -20,7 +20,7 @@ const Contactpage = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Adres</h2>
-                                            <p>F. K. Gökay Cad. Okul Sokak. Altunizade Sitesi A-Blok No:1 Kat:3 Daire:16 Oda:3 A/16 Üsküdar/İstanbul</p>
+                                            <p>Altunizade Mahallesi  F. K. Gökay Cad. Okul Sokak No:1 Altunizade Sitesi A-Blok Kat:3 Daire:16 Üsküdar/İstanbul </p>
                                         </div>
                                     </div>
                                 </div> 
@@ -47,7 +47,7 @@ const Contactpage = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>İletişim</h2>
-                                            <p>Tel: +0216 339 09 01</p>
+                                            <p>Tel: +0216 339 09 00</p>
                                             <p>Fax: +0216 339 47 47</p>
                                         </div>
                                     </div>

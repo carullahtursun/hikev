@@ -23,7 +23,7 @@ const FoundationIntro = () => {
         {
             id: 3,
             title: "Burs ve Eğitim Destekleri",
-            description: "120 öğrenciye burs, muhtelif eğitim destekleri ve izcilik kulübü faaliyetleri sağlıyoruz",
+            description: "Toplamda 648 öğrenciye burs, muhtelif eğitim destekleri ve izcilik kulübü faaliyetleri sağlıyoruz",
             image: "/images/tanitim/HİKEV Tanıtım (1).png",
             icon: "fi flaticon-money",
             timelineIcon: "ti-money"

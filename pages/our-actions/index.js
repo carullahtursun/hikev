@@ -27,7 +27,7 @@ const OurActions = () => {
         points: [
             "Üsküdar Üniversitesi kuruluş çalışması",
             "Sabahattin Zaim Üniversitesi Eğitim Fakültesi’ne Hacı İsmail Kurt Eğitim Vakfı adına Merkezi bir derslik binası yapılmıştır.",
-            "120 öğrenciye burs, muhtelif eğitim destekleri, izcilik kulübü faaliyetleri",
+            "Toplamda 648 öğrenciye burs, muhtelif eğitim destekleri, izcilik kulübü faaliyetleri",
             "Dünyada baş gösteren gayri insani ve zulümkâr hadiselere karşı, toplum gönüllüsü teşekküllerle iş birliği yapmak; öğrencilerin adalet ve vicdan duygularını geliştirici etkinlik planları hazırlamak.",
             "Bilhassa Gazze'de on binlerce paralimpik çocuk ve gencin geleceğine katkı sağlayacak projeler üretmek.",
             "Kafkasya'dan hicret eden yetim çocukların geleceğine el uzatacak projeler geliştirmek.",

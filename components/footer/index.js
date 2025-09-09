@@ -90,15 +90,15 @@ const Footer = (props) => {
                   </p>
                   <ul>
                     <li>
-                      <i className="fi flaticon-mail"></i>hikevorg@gmail.com
+                      <i className="fi flaticon-mail"></i>hikevorg@gmail.com 
                     </li>
                     <li>
-                      <i className="fi flaticon-phone-call"></i>+0216 339 47 47
+                      <i className="fi flaticon-phone-call"></i>+0216 339 09 00
                     </li>
                     <li>
-                      <i className="fi flaticon-location"></i>F. K. Gökay Cad.
-                      Okul Sokak. Altunizade Sitesi A-Blok No:1 Kat:3 Daire:16
-                      Oda:3 A/16 Üsküdar/İstanbul
+                      <i className="fi flaticon-location"></i>Altunizade Mahallesi
+                        F. K. Gökay Cad.
+                         Okul Sokak No:1 Altunizade Sitesi A-Blok Kat:3 Daire:16 Üsküdar/İstanbul 
                     </li>
                   </ul>
                 </div>
