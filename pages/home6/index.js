@@ -9,7 +9,6 @@ import Service from "../../components/Service";
 import FunFact from "../../components/FunFact";
 import FoundationIntro from "../../components/FoundationIntro";
 import ActivitiesSections from "../../components/ActivitiesSections";
-import styles from "../../styles/Activities.module.css";
 
 const HomePage6 = () => {
   return (
